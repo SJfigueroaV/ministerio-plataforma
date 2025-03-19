@@ -14,6 +14,7 @@ import {
   TwitterShareButton,
   TwitterIcon,
 } from 'next-share'
+import TwiterShare from "@/components/twiter-share";
 
 
 const defaultUrl = process.env.VERCEL_URL
@@ -31,7 +32,7 @@ export const metadata = {
     siteName: "Shekina",
     images: [
       {
-        url: `${defaultUrl}/og-image.jpg`, // Cambia por tu imagen real
+        url: "https://ministerio-plataforma.vercel.app/panteon-de-roma-exterior.jpg", // Cambia por tu imagen real
         width: 1200,
         height: 630,
         alt: "Shekina - Plataforma ministerio",
@@ -43,7 +44,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Shekina",
     description: "Plataforma ministerio",
-    images: ["/panteon-de-roma-exterior.jpg"], // Cambia por tu imagen real
+    images: ["https://ministerio-plataforma.vercel.app/panteon-de-roma-exterior.jpg"], // Cambia por tu imagen real
   },
 };
 
@@ -114,20 +115,8 @@ export default function RootLayout({
                       <svg className="w-8 h-8 mb-1 ml-1 transition-all" xmlns="http://www.w3.org/2000/svg" width="800" height="800" preserveAspectRatio="xMidYMid" viewBox="0 -28.5 256 256"><path fill="#5865F2" d="M216.856339 16.5966031C200.285002 8.84328665 182.566144 3.2084988 164.041564 0c-2.275041 4.11318106-4.93294 9.64549908-6.765465 14.0464379-19.692104-2.9614483-39.203132-2.9614483-58.5330827 0C96.9108417 9.64549908 94.1925838 4.11318106 91.8971895 0 73.3526068 3.2084988 55.6133949 8.86399117 39.0420583 16.6376612 5.61752293 67.146514-3.4433191 116.400813 1.08711069 164.955721c22.16890891 16.555194 43.65325271 26.611976 64.77502181 33.192855 5.2150826-7.17745 9.8662303-14.807241 13.8730814-22.848315-7.6311949-2.899686-14.9402415-6.478059-21.8464273-10.632298 1.8321746-1.357374 3.6243438-2.776511 5.3558032-4.236706 42.1228202 19.70193 87.8903382 19.70193 129.5099332 0 1.751813 1.460195 3.543631 2.879332 5.355803 4.236706-6.926539 4.174593-14.255589 7.752966-21.886784 10.653002 4.006851 8.02037 8.637996 15.670866 13.873082 22.847965 21.142122-6.580879 42.646399-16.637311 64.815325-33.213209 5.315798-56.28752-9.080862-105.0894778-38.05561-148.3591179ZM85.4738752 135.09489c-12.6448471 0-23.0146535-11.804735-23.0146535-26.179989 0-14.3752538 10.1483733-26.2003423 23.0146535-26.2003423 12.8666312 0 23.2360868 11.804384 23.0146538 26.2003423.020002 14.375254-10.1480226 26.179989-23.0146538 26.179989Zm85.0513618 0c-12.644847 0-23.014653-11.804735-23.014653-26.179989 0-14.3752538 10.148022-26.2003423 23.014653-26.2003423 12.866281 0 23.236087 11.804384 23.014654 26.2003423 0 14.375254-10.148373 26.179989-23.014654 26.179989Z"></path></svg>
                       <span className="pl-2 text-lg font-normal transition-colors">Entra a Discord</span>
                     </a>
-                    <a className="items-center justify-center hidden text-sm font-semibold text-white/80 md:flex group hover:text-yellow-300 gap-x-2" href="">
-                      <svg className="w-8 h-8 mb-1 ml-1 text-gray-500 transition-all " viewBox="0 0 612 612"><path d="M612 116.258a250.714 250.714.0 01-72.088 19.772c25.929-15.527 45.777-40.155 55.184-69.411-24.322 14.379-51.169 24.82-79.775 30.48-22.907-24.437-55.49-39.658-91.63-39.658-69.334.0-125.551 56.217-125.551 125.513.0 9.828 1.109 19.427 3.251 28.606-104.326-5.24-196.835-55.223-258.75-131.174-10.823 18.51-16.98 40.078-16.98 63.101.0 43.559 22.181 81.993 55.835 104.479A125.556 125.556.0 0124.629 232.21v1.568c0 60.806 43.291 111.554 100.693 123.104-10.517 2.83-21.607 4.398-33.08 4.398-8.107.0-15.947-.803-23.634-2.333 15.985 49.907 62.336 86.199 117.253 87.194-42.947 33.654-97.099 53.655-155.916 53.655-10.134.0-20.116-.612-29.944-1.721 55.567 35.681 121.536 56.485 192.438 56.485 230.948.0 357.188-191.291 357.188-357.188l-.421-16.253c24.666-17.593 46.005-39.697 62.794-64.861z" fill="#1da1f2"></path></svg>
-                      <span className="pl-2 text-lg font-normal transition-colors">Compartir</span>
-                    </a>
-                    <TwitterShareButton
-                      url="https://ministerio-plataforma.vercel.app/"
-                      title="¡Mira esta increíble página!"
-                      via="Jesús Arturo Quiroga" // (Opcional) Nombre de usuario sin @
-                      hashtags={["NextJS", "WebDevelopment", "TwitterShare"]}
-                      related={["openai", "vercel"]} // (Opcional) Usuarios sugeridos
-                      className="items-center justify-center hidden text-sm font-semibold text-white/80 md:flex group hover:text-yellow-300 gap-x-2"
-                    >
-                      <svg className="w-8 h-8 mb-1 ml-1 text-gray-500 transition-all " viewBox="0 0 612 612"><path d="M612 116.258a250.714 250.714.0 01-72.088 19.772c25.929-15.527 45.777-40.155 55.184-69.411-24.322 14.379-51.169 24.82-79.775 30.48-22.907-24.437-55.49-39.658-91.63-39.658-69.334.0-125.551 56.217-125.551 125.513.0 9.828 1.109 19.427 3.251 28.606-104.326-5.24-196.835-55.223-258.75-131.174-10.823 18.51-16.98 40.078-16.98 63.101.0 43.559 22.181 81.993 55.835 104.479A125.556 125.556.0 0124.629 232.21v1.568c0 60.806 43.291 111.554 100.693 123.104-10.517 2.83-21.607 4.398-33.08 4.398-8.107.0-15.947-.803-23.634-2.333 15.985 49.907 62.336 86.199 117.253 87.194-42.947 33.654-97.099 53.655-155.916 53.655-10.134.0-20.116-.612-29.944-1.721 55.567 35.681 121.536 56.485 192.438 56.485 230.948.0 357.188-191.291 357.188-357.188l-.421-16.253c24.666-17.593 46.005-39.697 62.794-64.861z" fill="#1da1f2"></path></svg>
-                    </TwitterShareButton>
+
+                    <TwiterShare />
                   </div>
                 </div>
               </nav>
