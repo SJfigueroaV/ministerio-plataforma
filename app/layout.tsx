@@ -32,10 +32,10 @@ export const metadata = {
     siteName: "Shekina",
     images: [
       {
-        url: "https://ministerio-plataforma.vercel.app/panteon-de-roma-exterior.jpg", // Cambia por tu imagen real
+        url: `${defaultUrl}/panteon-de-roma-exterior.jpg`, // Cambia por tu imagen real
+        alt: "Shekina - Plataforma ministerio",
         width: 1200,
         height: 630,
-        alt: "Shekina - Plataforma ministerio",
       },
     ],
     type: "website",
@@ -44,7 +44,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Shekina",
     description: "Plataforma ministerio",
-    images: ["https://ministerio-plataforma.vercel.app/panteon-de-roma-exterior.jpg"], // Cambia por tu imagen real
+    images: [`${defaultUrl}/panteon-de-roma-exterior.jpg`], // Cambia por tu imagen real
   },
 };
 

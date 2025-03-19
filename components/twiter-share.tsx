@@ -5,9 +5,11 @@ import { TwitterShareButton } from "next-share";
 export default function TwiterShare() {
   return (
     <TwitterShareButton
-      url="https://ministerio-plataforma.vercel.app/"
+      url="https://ministerio-plataforma-ccpfv4a1n.vercel.app/"
       title="¡Mira esta increíble página!"
-      via="Jesús Arturo Quiroga" // (Opcional) Nombre de usuario sin @
+      windowWidth={800}  // Ancho de la ventana emergente
+      windowHeight={600} // Alto de la ventana emergente
+      via="JesusQuiroga" // (Opcional) Nombre de usuario sin @
       hashtags={["NextJS", "WebDevelopment", "TwitterShare"]}
       related={["openai", "vercel"]} // (Opcional) Usuarios sugeridos
       className="items-center justify-center hidden text-sm font-semibold text-white/80 md:flex group hover:text-yellow-300 gap-x-2"
